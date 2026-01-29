@@ -1,11 +1,83 @@
+<!-- IMAGE SLIDER -->
 <div class="container-fluid p-0">
-  <img
-    src="DCM.jpg"
-    alt="Women Employment and Safety"
-    class="img-fluid w-100"
-    style="max-height: 550px; object-fit: cover"
-  />
+  <div
+    id="imageCarousel"
+    class="carousel slide"
+    data-bs-ride="carousel"
+    data-bs-interval="3000"
+  >
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#imageCarousel"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#imageCarousel"
+        data-bs-slide-to="1"
+      ></button>
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <!-- Image 1 -->
+      <div class="carousel-item active">
+        <img
+          src="dcmimage9.jpeg"
+          class="d-block w-100"
+          alt="Women Employment and Safety"
+          style="max-height: 550px; object-fit: cover"
+        />
+      </div>
+
+      <!-- Image 2 -->
+      <div class="carousel-item">
+        <img
+          src="dcmimage10.jpeg"
+          class="d-block w-100"
+          alt="Women Safety Initiative"
+          style="max-height: 550px; object-fit: cover"
+        />
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#imageCarousel"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#imageCarousel"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
 </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const carouselElement = document.querySelector("#imageCarousel");
+    if (carouselElement) {
+      new bootstrap.Carousel(carouselElement, {
+        interval: 3000,
+        ride: "carousel",
+        pause: false,
+      });
+    }
+  });
+</script>
+
 <div class="container my-4">
   <div
     class="position-relative rounded-4 overflow-hidden shadow bg-danger-subtle"
@@ -715,7 +787,7 @@
         <!-- STATS CONTAINER -->
         <div class="container my-5">
           <!-- SECTION HEADER -->
-          
+
           <!-- STATS WRAPPER -->
           <div class="bg-light rounded-4 shadow-lg p-4">
             <div class="row g-4 text-center">
