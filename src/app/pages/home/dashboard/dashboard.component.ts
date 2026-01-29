@@ -5,6 +5,7 @@ declare var bootstrap: any;
 
 @Component({
   selector: 'app-dashboard',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
@@ -13,37 +14,36 @@ export class DashboardComponent implements AfterViewInit {
   private platformId = inject(PLATFORM_ID);
 
   ngAfterViewInit(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      /* ================= CAROUSEL (EXISTING) ================= */
-      const carouselEl = document.getElementById('mainCarousel');
+    if (!isPlatformBrowser(this.platformId)) return;
 
-      if (carouselEl) {
-        new bootstrap.Carousel(carouselEl, {
-          interval: 3000,
-          ride: 'carousel',
-          pause: false,
-          wrap: true,
-        });
-      }
+    /* ================= CAROUSEL ================= */
+    const carouselEl = document.getElementById('imageCarousel'); // ✅ MATCH HTML ID
 
-      /* ================= COUNT UP ON SCROLL (NEW) ================= */
-      const counters =
-        document.querySelectorAll<HTMLElement>('h3[data-target]');
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              this.animateCounter(entry.target as HTMLElement);
-              observer.unobserve(entry.target); // run once
-            }
-          });
-        },
-        { threshold: 0.4 },
-      );
-
-      counters.forEach((counter) => observer.observe(counter));
+    if (carouselEl && bootstrap?.Carousel) {
+      bootstrap.Carousel.getOrCreateInstance(carouselEl, {
+        interval: 3000, // slideshow every 3 seconds
+        ride: 'carousel',
+        pause: false, // keep sliding after arrow click
+        wrap: true, // loop images
+      });
     }
+
+    /* ================= COUNT UP ON SCROLL ================= */
+    const counters = document.querySelectorAll<HTMLElement>('h3[data-target]');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            this.animateCounter(entry.target as HTMLElement);
+            observer.unobserve(entry.target); // run once
+          }
+        });
+      },
+      { threshold: 0.4 },
+    );
+
+    counters.forEach((counter) => observer.observe(counter));
   }
 
   /* ================= COUNT FUNCTION ================= */
