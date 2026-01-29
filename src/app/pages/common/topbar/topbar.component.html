@@ -1,0 +1,360 @@
+<!-- ================= DESKTOP SOCIAL DOCK ================= -->
+<div class="d-none d-lg-flex flex-column position-fixed top-50 start-0 translate-middle-y z-3">
+  <ul class="list-unstyled m-0">
+    <!-- LinkedIn -->
+    <li class="mb-2">
+      <a href="https://www.linkedin.com/in/tamil-nadu-women-employment-and-safety-project-tnwesafe-976b7a2b8/"
+        target="_blank" class="d-flex align-items-center text-white text-decoration-none shadow" style="
+          width: 120px;
+          height: 36px;
+          margin-left: -90px;
+          border-radius: 0 8px 8px 0;
+          padding: 0 8px;
+          background: linear-gradient(135deg, #0a66c2, #4a90e2);
+          transition: all 0.4s ease;
+          font-size: 12px;
+        " onmouseover="this.style.marginLeft='-6px'" onmouseout="this.style.marginLeft='-90px'">
+        <span class="fw-semibold">LinkedIn</span>
+        <i class="fab fa-linkedin-in ms-auto me-1" style="font-size: 12px"></i>
+      </a>
+    </li>
+
+    <!-- Facebook -->
+    <li class="mb-2">
+      <a href="https://www.facebook.com/people/TNWeSafe/61556708655934/" target="_blank"
+        class="d-flex align-items-center text-white text-decoration-none shadow" style="
+          width: 120px;
+          height: 36px;
+          margin-left: -90px;
+          border-radius: 0 8px 8px 0;
+          padding: 0 8px;
+          background: linear-gradient(135deg, #1877f2, #0f5bd8);
+          transition: all 0.4s ease;
+          font-size: 12px;
+        " onmouseover="this.style.marginLeft='-6px'" onmouseout="this.style.marginLeft='-90px'">
+        <span class="fw-semibold">Facebook</span>
+        <i class="fab fa-facebook-f ms-auto me-1" style="font-size: 12px"></i>
+      </a>
+    </li>
+
+    <!-- Instagram -->
+    <li class="mb-2">
+      <a href="https://www.instagram.com/tnwesafe?igsh=MTdyMDl3aDFncno3Mg==" target="_blank"
+        class="d-flex align-items-center text-white text-decoration-none shadow" style="
+          width: 120px;
+          height: 36px;
+          margin-left: -90px;
+          border-radius: 0 8px 8px 0;
+          padding: 0 8px;
+          background: linear-gradient(135deg, #e1306c, #f77737);
+          transition: all 0.4s ease;
+          font-size: 12px;
+        " onmouseover="this.style.marginLeft='-6px'" onmouseout="this.style.marginLeft='-90px'">
+        <span class="fw-semibold">Instagram</span>
+        <i class="fab fa-instagram ms-auto me-1" style="font-size: 12px"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- ================= MOBILE FLOATING BUTTON ================= -->
+<div class="d-lg-none position-fixed bottom-0 end-0 p-2 z-3">
+  <div class="d-flex flex-column align-items-end mb-2">
+    <a href="https://linkedin.com" target="_blank"
+      class="d-flex align-items-center justify-content-center rounded-circle shadow mb-2" style="
+        width: 36px;
+        height: 36px;
+        background: linear-gradient(135deg, #0a66c2, #4a90e2);
+      ">
+      <i class="fab fa-linkedin-in text-white" style="font-size: 12px"></i>
+    </a>
+
+    <a href="https://instagram.com" target="_blank"
+      class="d-flex align-items-center justify-content-center rounded-circle shadow" style="
+        width: 36px;
+        height: 36px;
+        background: linear-gradient(135deg, #e1306c, #f77737);
+      ">
+      <i class="fab fa-instagram text-white" style="font-size: 12px"></i>
+    </a>
+  </div>
+
+  <button class="btn rounded-circle shadow-lg" style="width: 44px; height: 44px; background: #343a40">
+    <i class="fas fa-share-nodes text-white" style="font-size: 12px"></i>
+  </button>
+</div>
+
+<!-- ================= TOP HEADER ================= -->
+<div class="bg-light border-bottom">
+  <div class="container-fluid px-4" style="background-color: #2c364a">
+    <!-- HEADER LEFT SECTION -->
+    <div class="d-flex align-items-center justify-content-around flex-wrap w-100 px-4 p-3">
+      <!-- 🔹 TAMIL NADU GOVERNMENT BLOCK -->
+      <div class="d-flex align-items-center">
+        <!-- TN Logo -->
+        <img src="tn-logo.png" alt="Government of Tamil Nadu" class="img-fluid" style="height: 55px" />
+
+        <!-- TN Text -->
+        <div class="lh-sm" style="font-family: Poppins">
+          <div class="fw-bold text-white" style="font-family: Poppins, sans-serif">
+            தமிழ்நாடு அரசு
+          </div>
+          <div class="fw-semibold text-white" style="font-family: Poppins, sans-serif">
+            Government of Tamil Nadu
+          </div>
+          <div class="small text-white" style="font-family: Poppins, sans-serif">
+            Women Employment & Safety Project Directorate
+          </div>
+        </div>
+      </div>
+
+      <!-- 🔹 WOMEN EMPLOYMENT & SAFETY BLOCK -->
+      <div class="d-flex align-items-center gap-3">
+        <!-- Women Logo -->
+        <img src="TNWE_logo.png " alt="Women Employment and Safety Project" class="img-fluid ms-auto"
+          style="height: 55px" />
+        <!-- 🔹 QUOTE (RIGHT SIDE) -->
+        <div class="ms-auto fst-cursive text-white" style="font-family: Poppins, sans-serif">
+          Supporting women with sustainable employment opportunities<br />
+          and a safe workplace ecosystem.
+        </div>
+        <!-- TEXT SIZE CONTROLS -->
+        <div class="d-flex align-items-center gap-2 ms-auto ">
+
+
+          <button type="button" class="btn btn-outline-light btn-sm px-2 btn-end" (click)="decreaseFont()"
+            aria-label="Decrease font size">
+            A−
+          </button>
+
+          <button type="button" class="btn btn-outline-light btn-sm px-2 fw-bold" (click)="resetFont()"
+            aria-label="Reset font size">
+            A
+          </button>
+
+          <button type="button" class="btn btn-outline-light btn-sm px-2" (click)="increaseFont()"
+            aria-label="Increase font size">
+            A+
+          </button>
+        </div>
+
+        <!-- Women Text -->
+        <!-- <div class="lh-sm">
+          <div class="fw-bold text-success">
+            மகளிர் வேலைவாய்ப்பு மற்றும் பாதுகாப்பு முன்னெடுப்பு
+          </div>
+          <div class="fw-semibold text-dark">
+            Women Employment & Safety Initiative
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ===== STICKY NAVBAR SECTION ===== -->
+<div class="sticky-top shadow-sm w-100" style="z-index: 1020; top: 0; background-color: #f4e2d8;">
+  <!-- ===== THIN GOLD ORNAMENT ===== -->
+  <div class="thin-gold-wrapper">
+    <div class="thin-gold-line"></div>
+
+    <div class="thin-gold-band">
+      <span class="thin-gold-ornament"></span>
+    </div>
+
+    <div class="thin-gold-line"></div>
+  </div>
+
+  <!-- ===== WQEP ORNAMENT STRIP ===== -->
+  <!-- ================= NOTIFICATION BAR ================= -->
+  <!-- <div class="notification-bar px-2" style="background-color: #2c364a">
+    <div class="container-fluid text-white">
+      <marquee behavior="scroll" direction="left" scrollamount="6">
+        🔔 <strong>Notification:</strong>
+        <span class="notification-text text-danger">
+          Tender for Hiring of consultancy agency to develop a State level
+          Framework for the Women's Quality Employment Plan (WQEP)
+        </span>
+      </marquee>
+    </div>
+  </div> -->
+
+  <!-- ================= MAIN NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg navbar-dark border w-100 badge p-2" style="background-color: #f4e2d8">
+    <div class="container">
+      <!-- MOBILE TOGGLER -->
+      <button class="navbar-toggler me-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- MENU ITEMS -->
+      <div class=" ms-auto d-flex align-items-start gap-2 text-start text-dark "
+        style="font-family: 'Noto Serif Tamil', 'Latha', serif">
+        <!-- Thiruvalluvar Image -->
+        <img src="image.png" alt="Thiruvalluvar" class="img-fluid" style="height: 28px" />
+
+        <!-- Thirukkural Text -->
+        <div>
+          <span class="d-block fw-aerial-bold mb-1" style="font-family: Poppins, sans-serif">
+            பெண்ணின் பெருந்தக்க யாவுள கற்பென்னும்
+          </span>
+          <span class="d-block fw-aerial-bold" style="font-family: Poppins, sans-serif">
+            திண்மை உண்டாகப் பெறின்.
+          </span>
+        </div>
+      </div>
+
+      <div class="collapse navbar-collapse justify-content-end" id="mainNavbar" style="font-size: 14px">
+        <ul class="navbar-nav mb-2 mb-lg-0 text-center text-lg-start gap-2">
+          <!-- HOME -->
+          <li class="nav-item">
+            <a class="fw-bolder fw-semibold nav-link text-Poppins, sans-serif text-dark rounded-3" routerLink="/"
+              routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              Home
+            </a>
+          </li>
+
+          <!-- ABOUT US -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle rounded-3 fw-bold text-dark text-Poppins, sans-serif" role="button">
+              About Us
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark gap-2 bg-white p-3" style="font-family: auto">
+              <li>
+                <a class="dropdown-item text-dark mb-2" href="about-tnwesafe.pdf" target="_blank">
+                  <img src="double-right-icon (2).gif" alt="arrow" width="18" height="18" class="me-2" />
+                  TNWESAFE</a>
+              </li>
+              <li>
+                <a class="dropdown-item text-dark mb-2" href="Steering Committee.pdf" target="_blank">
+                  <img src="double-right-icon (2).gif" alt="arrow" width="18" height="18" class="me-2" />
+                  Steering Committee
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item text-dark mb-2" href="#">
+                  <img src="double-right-icon (2).gif" alt="arrow" width="18" height="18" class="me-2" />Team</a>
+              </li>
+              <li>
+                <a class="dropdown-item text-dark mb-2" href="TNWESAFE-SPMU.pdf" target="_blank">
+                  <img src="double-right-icon (2).gif" alt="arrow" width="18" height="18" class="me-2" />
+                  Organogram
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item text-dark mb-2" href="#"><img src="double-right-icon (2).gif" alt="arrow"
+                    width="18" height="18" class="me-2" />Flagship Programmes</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- IMPLEMENTING AGENCIES -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle rounded-3 fw-bold text-dark" role="button">
+              Implementing Agencies
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-dark bg-white p-3">
+              <li>
+                <a class="dropdown-item text-dark mb-2" href="https://www.tnskill.tn.gov.in/" target="_blank">
+                  <img src="double-right-icon (2).gif" alt="arrow" width="18" height="18" class="me-2" />TNSDC</a>
+              </li>
+              <li>
+                <a class="dropdown-item text-dark mb-2" href="https://msme.gov.in/" target="_blank">
+                  <img src="double-right-icon (2).gif" alt="arrow" width="18" height="18" class="me-2" />
+                  MSME
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item text-dark mb-2" href="https://www.tnsocialwelfare.tn.gov.in/en" target="_blank">
+                  <img src="double-right-icon (2).gif" alt="arrow" width="18" height="18" class="me-2" />SWD</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- MEDIA & INFORMATION -->
+          <!-- MEDIA & INFORMATION -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle rounded-3 fw-bold text-dark" href="#" role="button">
+              Media & Information
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark bg-white p-3">
+              <li>
+                <a class="dropdown-item text-dark mb-2" href="/schemes">
+                  <img src="double-right-icon (2).gif" alt="arrow" width="18" height="18" class="me-2" />schemes</a>
+              </li>
+              <li>
+                <a class="dropdown-item text-dark mb-2" href="program">
+                  <img src="double-right-icon (2).gif" alt="arrow" width="18" height="18" class="me-2" />Programmes</a>
+              </li>
+              <li>
+                <a class="dropdown-item text-dark mb-2" href="/events">
+                  <img src="double-right-icon (2).gif" alt="arrow" width="18" height="18" class="me-2" />Events</a>
+              </li>
+              <li>
+                <a class="dropdown-item text-dark mb-2" href="/tender-notifications"><img
+                    src="double-right-icon (2).gif" alt="arrow" width="18" height="18" class="me-2" />Tender
+                  Notification</a>
+              </li>
+              <li>
+                <a class="dropdown-item text-dark mb-2" href="/gallery">
+                  <img src="double-right-icon (2).gif" alt="arrow" width="18" height="18" class="me-2" />Gallery</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- DOCUMENTS -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle rounded-3 fw-bold text-dark" role="button">
+              Documents
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark bg-white p-3">
+              <li>
+                <a class="dropdown-item text-dark mb-2" href="ESSA_Document.pdf" target="_blank">
+                  <img src="double-right-icon (2).gif" alt="arrow" width="18" height="18" class="me-2" />
+                  Environmental and Social Systems
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item text-dark mb-2" href="govt orders.pdf" target="_blank">
+                  <img src="double-right-icon (2).gif" alt="arrow" width="18" height="18" class="me-2" />Government
+                  Orders</a>
+              </li>
+              <li>
+                <a class="dropdown-item text-dark mb-2" href="#">
+                  <img src="double-right-icon (2).gif" alt="arrow" width="18" height="18" class="me-2" />IEC
+                  Material</a>
+              </li>
+              <li>
+                <a class="dropdown-item text-dark mb-2" href="https://webhikesolutions.com/TNWESAFE/donate.html"
+                  target="_blank">
+                  <img src="double-right-icon (2).gif" alt="arrow" width="18" height="18" class="me-2" />Success
+                  Stories</a>
+              </li>
+              <li>
+                <a class="dropdown-item text-dark mb-2" href="/news-letter">
+                  <img src="double-right-icon (2).gif" alt="arrow" width="18" height="18" class="me-2" />News
+                  Letters</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- CONTACT -->
+          <li class="nav-item mb-2">
+            <a class="nav-link fw-bold text-dark" href="/contact-us">
+              Contact Us
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="thin-gold-wrapper">
+    <div class="thin-gold-line"></div>
+    <div class="thin-gold-band">
+      <span class="thin-gold-ornament"></span>
+    </div>
+    <div class="thin-gold-line"></div>
+  </div>
+</div>

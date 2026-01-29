@@ -1,0 +1,51 @@
+/* ===== ULTRA THIN GOLD DESIGN ===== */
+.thin-gold-wrapper {
+  background: transparent;
+}
+
+/* Hairline gold borders */
+.thin-gold-line {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    #6e531a,
+    #f2d27c,
+    #caa24b,
+    #f2d27c,
+    #6e531a
+  );
+}
+
+/* VERY thin gold band */
+.thin-gold-band {
+  height: 3px; /* THIS FIXES YOUR ISSUE */
+  background: linear-gradient(to bottom, #f6e3a1, #d4af37, #f6e3a1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tiny center ornament */
+.thin-gold-ornament {
+  width: 36px;
+  height: 6px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 20'%3E%3Cpath d='M60 6 C52 3 44 8 36 6 C40 12 52 14 60 11 C68 14 80 12 84 6 C76 8 68 3 60 6 Z' fill='%23b88a2d'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.85;
+}
+/* Enable hover dropdown */
+.navbar .dropdown:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+/* Prevent click requirement */
+.navbar .dropdown-toggle::after {
+  transition: transform 0.2s ease;
+}
+
+/* Optional: rotate arrow on hover */
+.navbar .dropdown:hover .dropdown-toggle::after {
+  transform: rotate(180deg);
+}

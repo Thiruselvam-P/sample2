@@ -1,0 +1,613 @@
+<div class="container my-4">
+  <!-- SECTION HEADER -->
+  <div
+    class="d-flex justify-content-center align-items-center gap-2 mb-4"
+    style="font-family: Poppins, sans-serif"
+  >
+    <!-- Heading -->
+    <h2 class="fw-bold mb-0">Media & Announcements</h2>
+  </div>
+
+  <!-- CARDS ROW -->
+  <div class="row g-4">
+    <!-- card01 -->
+       <div
+      class="col-md-4"
+      *ngIf="currentPage === 1 || (startIndex <= 0 && endIndex > 0)"
+    >
+      <div class="card border-0 h-100">
+        
+          <img
+            src="gallery01.jpg"
+            class="card-img-top rounded-4"
+            alt="gallery1"
+            style="height: 250px; object-fit: cover"
+          />
+      
+
+        <div class="card-body px-0 pt-3">
+          <p class="fw-semibold mb-0">
+            TECHNICAL WORKSHOP
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- CARD 1 -->
+    <div
+      class="col-md-4"
+      *ngIf="currentPage === 1 || (startIndex <= 0 && endIndex > 0)"
+    >
+      <div class="card border-0 h-100">
+        <a
+          href="https://www.linkedin.com/feed/update/urn:li:activity:7381312769473695744/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="gallery1.jpg"
+            class="card-img-top rounded-4"
+            alt="gallery1"
+            style="height: 250px; object-fit: cover"
+          />
+        </a>
+
+        <div class="card-body px-0 pt-3">
+          <p class="fw-semibold mb-0">
+            WEP, in collaboration with the Government of Goa, launches the WEP
+            State Chapter in Goa, strengthening women entrepreneurship in food
+            processing and homestays
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div
+      class="col-md-4"
+      *ngIf="
+        (currentPage === 1 && 1 < endIndex) ||
+        (currentPage === 2 && 1 >= startIndex)
+      "
+    >
+      <div class="card border-0 h-100">
+        <a
+          href="https://www.linkedin.com/feed/update/urn:li:activity:7401878032589897728/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="gallery2.jpg"
+            class="card-img-top rounded-4"
+            alt="gallery2"
+            style="height: 250px; object-fit: cover"
+          />
+        </a>
+
+        <div class="card-body px-0 pt-3">
+          <p class="fw-semibold mb-0">
+            WEP, in partnership with DP World, launches We Rise ATR to support
+            women-led MSMEs by providing mentorship, trade facilitation, and
+            access to global markets
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div
+      class="col-md-4"
+      *ngIf="
+        (currentPage === 1 && 2 < endIndex) ||
+        (currentPage === 2 && 2 >= startIndex)
+      "
+    >
+      <div class="card border-0 h-100">
+        <a
+          href="https://www.linkedin.com/feed/update/urn:li:activity:7403085292955750400/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="gallery3.jpg"
+            class="card-img-top rounded-4"
+            alt="gallery"
+            style="height: 250px; object-fit: cover"
+          />
+        </a>
+
+        <div class="card-body px-0 pt-3">
+          <p class="fw-semibold mb-0">
+            WEP, SIDBI, Microsave Consulting and TransUnion CIBIL convene third
+            Financing Women Collaborative to improve women’s access to credit
+            and advance financing solutions for women entrepreneurs
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- CARD 4 -->
+    <div
+      class="col-md-4"
+      *ngIf="
+        (currentPage === 1 && 3 < endIndex) ||
+        (currentPage === 2 && 3 >= startIndex)
+      "
+    >
+      <div class="card border-0 h-100">
+        <a
+          href="https://www.linkedin.com/feed/update/urn:li:activity:7353378426092736514/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="gallery4.jpeg"
+            class="card-img-top rounded-4"
+            alt="gallery4"
+            style="height: 250px; object-fit: cover"
+          />
+        </a>
+        <div class="card-body px-0 pt-3">
+          <p class="fw-semibold mb-0">
+            WEP, COWE, and PHDCCI host She Powers summit to launch partnerships
+            and initiatives for women entrepreneurs
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- CARD 5 -->
+    <div
+      class="col-md-4"
+      *ngIf="
+        (currentPage === 1 && 4 < endIndex) ||
+        (currentPage === 2 && 4 >= startIndex)
+      "
+    >
+      <div class="card border-0 h-100">
+        <a
+          href="https://www.pib.gov.in/PressReleseDetail.aspx?PRID=2106956&reg=3&lang=1"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="gallery5.jpg"
+            class="card-img-top rounded-4"
+            alt="gallery5"
+            style="height: 250px; object-fit: cover"
+          />
+        </a>
+
+        <div class="card-body px-0 pt-3">
+          <p class="fw-semibold mb-0">
+            WEP, in collaboration with the Government of Mizoram, launched the
+            WEP State Chapter for Mizoram at the workshop organized under NITI
+            Aayog's State Support Mission.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- CARD 6 -->
+    <div
+      class="col-md-4"
+      *ngIf="
+        (currentPage === 1 && 5 < endIndex) ||
+        (currentPage === 2 && 5 >= startIndex)
+      "
+    >
+      <div class="card border-0 h-100">
+        <a
+          href="https://www.instagram.com/p/DHa76ynywLp/?img_index=1"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="gallery6.jpg"
+            class="card-img-top rounded-4"
+            alt="gallery6"
+            style="height: 250px; object-fit: cover"
+          />
+        </a>
+
+        <div class="card-body px-0 pt-3">
+          <p class="fw-semibold mb-0">
+            WEP Hosts 4th Steering Committee Meeting at NITI Aayog
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- CARD 7 -->
+    <div
+      class="col-md-4"
+      *ngIf="
+        (currentPage === 1 && 6 < endIndex) ||
+        (currentPage === 2 && 6 >= startIndex)
+      "
+    >
+      <div class="card border-0 h-100">
+        <a
+          href="https://www.instagram.com/p/DHa76ynywLp/?img_index=1"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="gallery7.jpg"
+            class="card-img-top rounded-4"
+            alt="gallery7"
+            style="height: 250px; object-fit: cover"
+          />
+        </a>
+
+        <div class="card-body px-0 pt-3">
+          <p class="fw-semibold mb-0">
+            WEP launched several initiatives to drive women-led development
+            through entrepreneurship at a workshop organized under NITI Aayog's
+            State Support Mission.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- CARD 8 -->
+    <div
+      class="col-md-4"
+      *ngIf="
+        (currentPage === 1 && 7 < endIndex) ||
+        (currentPage === 2 && 7 >= startIndex)
+      "
+    >
+      <div class="card border-0 h-100">
+        <a
+          href="https://www.instagram.com/p/DHlkzzOTHT1/?img_index=1"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="gallery8.png"
+            class="card-img-top rounded-4"
+            alt="gallery8"
+            style="height: 250px; object-fit: cover"
+          />
+        </a>
+        <div class="card-body px-0 pt-3">
+          <p class="fw-semibold mb-0">
+            ISB Workshop on Empowerment through cybersecurity:Skills for the
+            Modern Professional
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- CARD 9 -->
+    <div
+      class="col-md-4"
+      *ngIf="
+        (currentPage === 1 && 8 < endIndex) ||
+        (currentPage === 2 && 8 >= startIndex)
+      "
+    >
+      <div class="card border-0 h-100">
+        <a
+          href="https://api.wep.gov.in/public/uploads/publication/WEP_Newsletter_Jan_2025.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="gallery9.jpg"
+            class="card-img-top rounded-4"
+            alt="gallery9"
+            style="height: 250px; object-fit: cover"
+          />
+        </a>
+
+        <div class="card-body px-0 pt-3">
+          <p class="fw-semibold mb-0">
+            Empowering Women Entrepreneurs: Key Highlights & Developments
+            (Aug-Nov) of Women Entrepreneurship Platform
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- CARD 10 -->
+    <div
+      class="col-md-4"
+      *ngIf="
+        (currentPage === 1 && 9 < endIndex) ||
+        (currentPage === 2 && 9 >= startIndex)
+      "
+    >
+      <div class="card border-0 h-100">
+        <a
+          href="https://www.linkedin.com/feed/update/urn:li:activity:7283498694044270593/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="gallery10.jpeg"
+            class="card-img-top rounded-4"
+            alt="gallery10"
+            style="height: 250px; object-fit: cover"
+          />
+        </a>
+        <div class="card-body px-0 pt-3">
+          <p class="fw-semibold mb-0">
+            #AskWEP session on "Networking in the Age of Social Media - Driving
+            Business and Personal Growth"
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- CARD 11 -->
+    <div
+      class="col-md-4"
+      *ngIf="
+        (currentPage === 1 && 10 < endIndex) ||
+        (currentPage === 2 && 10 >= startIndex)
+      "
+    >
+      <div class="card border-0 h-100">
+        <a
+          href="https://www.linkedin.com/feed/update/urn:li:activity:7283058813157421056/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="gallery11.jpg"
+            class="card-img-top rounded-4"
+            alt="gallery11"
+            style="height: 250px; object-fit: cover"
+          />
+        </a>
+        <div class="card-body px-0 pt-3">
+          <p class="fw-semibold mb-0">
+            Launch of the WEP & Meero Labs Award to Reward Program
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- CARD 12 -->
+    <div
+      class="col-md-4"
+      *ngIf="
+        (currentPage === 1 && 11 < endIndex) ||
+        (currentPage === 2 && 11 >= startIndex)
+      "
+    >
+      <div class="card border-0 h-100">
+        <a
+          href="https://www.financialexpress.com/business/sme/international-womens-day-2024-harnessing-the-entrepreneurial-spirit-of-women/3417561/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="gallery12.jpg"
+            class="card-img-top rounded-4"
+            alt="gallery12"
+            style="height: 250px; object-fit: cover"
+          />
+        </a>
+        <div class="card-body px-0 pt-3">
+          <p class="fw-semibold mb-0">
+            Harnessing the entrepreneurial spirit of women
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- YOUR IMAGE CARD -->
+  </div>
+
+  <!-- PAGINATION CONTROLS -->
+  <div class="d-flex justify-content-center align-items-center gap-2 mb-5 mt-4">
+    <button
+      class="btn btn-sm"
+      style="background-color: transparent; border: none; font-size: 18px"
+      [disabled]="currentPage === 1"
+      (click)="changePage(currentPage - 1)"
+    >
+      ◀
+    </button>
+    <button
+      *ngFor="let page of [1, 2]"
+      class="btn btn-sm"
+      [ngClass]="currentPage === page ? 'btn-primary' : 'btn-light'"
+      [style]="
+        currentPage === page
+          ? 'min-width: 30px; font-weight: bold;'
+          : 'min-width: 30px;'
+      "
+      (click)="changePage(page)"
+    >
+      {{ page }}
+    </button>
+    <button
+      class="btn btn-sm"
+      style="background-color: transparent; border: none; font-size: 18px"
+      [disabled]="currentPage === totalPages"
+      (click)="changePage(currentPage + 1)"
+    >
+      ▶
+    </button>
+  </div>
+
+  <div class="d-flex justify-content-center align-items-center mb-4 mt-5">
+    <h2 class="fw-bold mb-0">Video Repository</h2>
+  </div>
+
+  <!-- video player row -->
+  <div class="row g-4">
+    <!-- video player -->
+    <div class="col-md-4">
+      <div class="card border-0 h-100">
+        <!-- THUMBNAIL AREA -->
+        <div class="position-relative">
+          <!-- DATE BADGE -->
+          <span
+            class="position-absolute top-0 start-0 m-3 px-3 py-1 rounded-pill bg-light fw-semibold small"
+          >
+            18-FEB-2024
+          </span>
+
+          <!-- CLICKABLE IMAGE -->
+          <a
+            href="https://www.youtube.com/watch?v=JIWmEmz5CpQ&t=3s"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <!-- YOUTUBE THUMBNAIL -->
+            <img
+              src="https://img.youtube.com/vi/JIWmEmz5CpQ/hqdefault.jpg"
+              class="w-100 rounded-4"
+              alt="Video thumbnail"
+              style="height: 220px; object-fit: cover; cursor: pointer"
+            />
+
+            <!-- PLAY ICON -->
+            <span
+              class="position-absolute top-50 start-50 translate-middle d-flex align-items-center justify-content-center rounded-circle bg-white shadow"
+              style="width: 55px; height: 55px; pointer-events: none"
+            >
+              <i class="bi bi-play-fill fs-3 text-dark"></i>
+            </span>
+          </a>
+        </div>
+
+        <!-- DESCRIPTION -->
+        <div class="card-body px-0 pt-3">
+          <p class="fw-semibold mb-0">
+            Unlocking Financial Potential: A discussion on making women
+            entrepreneurs more bankable with Dr. Anubha Prasad, GM, SIDBI.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- youtube2 -->
+    <div class="col-md-4">
+      <div class="card border-0 h-100">
+        <!-- THUMBNAIL AREA -->
+        <div class="position-relative">
+          <!-- DATE BADGE -->
+          <span
+            class="position-absolute top-0 start-0 m-3 px-3 py-1 rounded-pill bg-light fw-semibold small"
+          >
+            07-OCT-2023
+          </span>
+
+          <!-- CLICKABLE IMAGE -->
+          <a
+            href="https://www.youtube.com/watch?v=Hy6q3tNJ9eQ&t=2s"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <!-- YOUTUBE THUMBNAIL -->
+            <img
+              src="https://img.youtube.com/vi/Hy6q3tNJ9eQ/hqdefault.jpg"
+              class="w-100 rounded-4"
+              alt="Video thumbnail"
+              style="height: 220px; object-fit: cover; cursor: pointer"
+            />
+
+            <!-- PLAY ICON -->
+            <span
+              class="position-absolute top-50 start-50 translate-middle d-flex align-items-center justify-content-center rounded-circle bg-white shadow"
+              style="width: 55px; height: 55px; pointer-events: none"
+            >
+              <i class="bi bi-play-fill fs-3 text-dark"></i>
+            </span>
+          </a>
+        </div>
+
+        <!-- DESCRIPTION -->
+        <div class="card-body px-0 pt-3">
+          <p class="fw-semibold mb-0">
+            Mentorship For Women Entrepreneurship Development
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- youtube3 -->
+    <div class="col-md-4">
+      <div class="card border-0 h-100">
+        <!-- THUMBNAIL AREA -->
+        <div class="position-relative">
+          <!-- DATE BADGE -->
+          <span
+            class="position-absolute top-0 start-0 m-3 px-3 py-1 rounded-pill bg-light fw-semibold small"
+          >
+            27-DEC-2022
+          </span>
+
+          <!-- CLICKABLE IMAGE -->
+          <a
+            href="https://www.youtube.com/watch?v=rwzEjWIsUPg&t=3s"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <!-- YOUTUBE THUMBNAIL -->
+            <img
+              src="https://img.youtube.com/vi/rwzEjWIsUPg/hqdefault.jpg"
+              class="w-100 rounded-4"
+              alt="Video thumbnail"
+              style="height: 220px; object-fit: cover; cursor: pointer"
+            />
+
+            <!-- PLAY ICON -->
+            <span
+              class="position-absolute top-50 start-50 translate-middle d-flex align-items-center justify-content-center rounded-circle bg-white shadow"
+              style="width: 55px; height: 55px; pointer-events: none"
+            >
+              <i class="bi bi-play-fill fs-3 text-dark"></i>
+            </span>
+          </a>
+        </div>
+
+        <!-- DESCRIPTION -->
+        <div class="card-body px-0 pt-3">
+          <p class="fw-semibold mb-0">
+            Anna Roy Of Niti Aayog | Women Entrepreneurship In India | Exclusive
+            Interview | CNBC Awaaz
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- youtube4 -->
+    <div class="col-md-4">
+      <div class="card border-0 h-100">
+        <!-- THUMBNAIL AREA -->
+        <div class="position-relative">
+          <!-- DATE BADGE -->
+          <span
+            class="position-absolute top-0 start-0 m-3 px-3 py-1 rounded-pill bg-light fw-semibold small"
+          >
+            17-AUG-2022
+          </span>
+
+          <!-- CLICKABLE IMAGE -->
+          <a
+            href="https://www.youtube.com/watch?v=QTqnTfLQhps&t=1s"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <!-- YOUTUBE THUMBNAIL -->
+            <img
+              src="https://img.youtube.com/vi/QTqnTfLQhps/hqdefault.jpg"
+              class="w-100 rounded-4"
+              alt="Video thumbnail"
+              style="height: 220px; object-fit: cover; cursor: pointer"
+            />
+
+            <!-- PLAY ICON -->
+            <span
+              class="position-absolute top-50 start-50 translate-middle d-flex align-items-center justify-content-center rounded-circle bg-white shadow"
+              style="width: 55px; height: 55px; pointer-events: none"
+            >
+              <i class="bi bi-play-fill fs-3 text-dark"></i>
+            </span>
+          </a>
+        </div>
+
+        <!-- DESCRIPTION -->
+        <div class="card-body px-0 pt-3">
+          <p class="fw-semibold mb-0">
+            Unlocking Financial Potential: A discussion on making women
+            entrepreneurs more bankable with Dr. Anubha Prasad, GM, SIDBI.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

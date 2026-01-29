@@ -1,0 +1,177 @@
+<div class="container my-5">
+  <!-- HEADER -->
+  <div
+    class="text-center text-white p-5 mb-5 rounded-4 shadow"
+    style="background: linear-gradient(90deg, #2c364a, #20c997)"
+  >
+    <h2 class="fw-bold mb-2">Contact Us</h2>
+    <p class="mb-0">
+      Reach out to us for queries, feedback, or support related to TNWESAFE
+      initiatives
+    </p>
+  </div>
+
+  <div class="row g-4">
+    <!-- CONTACT DETAILS -->
+    <div class="col-md-5">
+      <div class="card border-0 shadow-lg rounded-4 h-100">
+        <div class="card-body p-4">
+          <div class="text-center mb-4">
+            <div
+              class="d-inline-flex align-items-center justify-content-center bg-success bg-opacity-10 text-success rounded-circle"
+              style="width: 80px; height: 80px"
+            >
+              <i class="bi bi-telephone-fill fs-2"></i>
+            </div>
+          </div>
+
+          <h5 class="fw-bold mb-4 text-success text-center">
+            Official Contact Details
+          </h5>
+
+         
+          <p>
+            <strong>📍 Address</strong><br />3rd Floor, TNSAMB Building, Guindy,
+            Chennai
+          </p>
+          <p><strong>☎ Phone</strong><br />+91-044-22331735</p>
+          <p><strong>✉ Email</strong><br />supporttnwesafe.org</p>
+          <p>
+            <strong>🕘 Working Hours</strong><br />Mon–Fri (10:00 AM – 5:30 PM)
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT FORM -->
+    <div class="col-md-7">
+      <div class="card border-0 shadow-lg rounded-4 h-100">
+        <div class="card-body p-4">
+          <h5 class="fw-bold mb-4 text-success">Send Us a Message</h5>
+
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+            <!-- NAME + EMAIL -->
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label fw-semibold">Full Name</label>
+                <input class="form-control" formControlName="name" />
+                @if (f['name'].touched && f['name'].invalid) {
+                <div class="text-danger mt-1">Name is required</div>
+                }
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label class="form-label fw-semibold">Email Address</label>
+                <input class="form-control" formControlName="email" />
+                @if (f['email'].touched && f['email'].invalid) {
+                <div class="text-danger mt-1">Enter a valid email</div>
+                }
+              </div>
+            </div>
+
+            <!-- MOBILE -->
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Mobile Number</label>
+              <input
+                class="form-control"
+                maxlength="10"
+                inputmode="numeric"
+                formControlName="mobile"
+                (input)="onMobileInput($event)"
+              />
+              @if (f['mobile'].touched && f['mobile'].invalid) {
+              <div class="text-danger mt-1">
+                Please enter a valid 10-digit mobile number
+              </div>
+              }
+            </div>
+
+            <!-- QUERY -->
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Nature of Query</label>
+              <select class="form-select" formControlName="queryType">
+                <option value="" disabled>Select</option>
+                <option>General Query</option>
+                <option>Schemes</option>
+                <option>Events</option>
+                <option>Grievance</option>
+                <option>Feedback</option>
+              </select>
+              @if (f['queryType'].touched && f['queryType'].invalid) {
+              <div class="text-danger mt-1">Please select a query type</div>
+              }
+            </div>
+
+            <!-- DISTRICT -->
+            <div class="mb-3">
+              <label class="form-label fw-semibold">District</label>
+              <select class="form-select" formControlName="district">
+                <option value="" disabled>Select District</option>
+                @for (d of districts; track d) {
+                <option>{{ d }}</option>
+                }
+              </select>
+              @if (f['district'].touched && f['district'].invalid) {
+              <div class="text-danger mt-1">Please select your district</div>
+              }
+            </div>
+
+            <!-- MESSAGE -->
+            <div class="mb-4">
+              <label class="form-label fw-semibold">Message</label>
+              <textarea
+                class="form-control"
+                rows="4"
+                formControlName="message"
+              ></textarea>
+              @if (f['message'].touched && f['message'].invalid) {
+              <div class="text-danger mt-1">Message is required</div>
+              }
+            </div>
+
+            <button
+              class="btn btn-success px-4"
+              type="submit"
+              [disabled]="contactForm.invalid"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SUCCESS MODAL -->
+<div class="modal fade" id="successModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">Success</h5>
+        <button
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+        ></button>
+      </div>
+      <div class="modal-body text-center">
+        <h5 class="text-success">Message Sent Successfully ✅</h5>
+        <p>We will contact you shortly.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MAP -->
+<div class="container my-4">
+  <div class="card border-0 shadow rounded-4 overflow-hidden">
+    <div class="card-header bg-primary text-white fw-semibold py-2">
+      Office Location
+    </div>
+    <iframe
+      src="https://www.google.com/maps?q=3rd%20Floor%2C%20TNSAMB%20Building%2C%20Guindy%2C%20Chennai&output=embed"
+      style="border: 0; width: 100%; height: 250px"
+      loading="lazy"
+    ></iframe>
+  </div>
+</div>
