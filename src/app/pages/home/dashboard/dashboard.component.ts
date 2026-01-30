@@ -16,15 +16,27 @@ export class DashboardComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     if (!isPlatformBrowser(this.platformId)) return;
 
-    /* ================= CAROUSEL ================= */
-    const carouselEl = document.getElementById('imageCarousel'); // ✅ MATCH HTML ID
+    /* ================= CAROUSEL : IMAGE SLIDER ================= */
+    const imageCarousel = document.getElementById('imageCarousel');
 
-    if (carouselEl && bootstrap?.Carousel) {
-      bootstrap.Carousel.getOrCreateInstance(carouselEl, {
-        interval: 3000, // slideshow every 3 seconds
+    if (imageCarousel && bootstrap?.Carousel) {
+      bootstrap.Carousel.getOrCreateInstance(imageCarousel, {
+        interval: 3000,
         ride: 'carousel',
-        pause: false, // keep sliding after arrow click
-        wrap: true, // loop images
+        pause: false,
+        wrap: true,
+      });
+    }
+
+    /* ================= CAROUSEL : CARD SLIDER (FIX) ================= */
+    const mainCarousel = document.getElementById('mainCarousel');
+
+    if (mainCarousel && bootstrap?.Carousel) {
+      bootstrap.Carousel.getOrCreateInstance(mainCarousel, {
+        interval: 3000,
+        ride: 'carousel',
+        pause: false,
+        wrap: true,
       });
     }
 
@@ -36,7 +48,7 @@ export class DashboardComponent implements AfterViewInit {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             this.animateCounter(entry.target as HTMLElement);
-            observer.unobserve(entry.target); // run once
+            observer.unobserve(entry.target);
           }
         });
       },
