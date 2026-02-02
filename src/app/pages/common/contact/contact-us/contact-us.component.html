@@ -14,31 +14,112 @@
   <div class="row g-4">
     <!-- CONTACT DETAILS -->
     <div class="col-md-5">
-      <div class="card border-0 shadow-lg rounded-4 h-100">
-        <div class="card-body p-4">
-          <div class="text-center mb-4">
-            <div
-              class="d-inline-flex align-items-center justify-content-center bg-success bg-opacity-10 text-success rounded-circle"
-              style="width: 80px; height: 80px"
+      <div
+        class="position-relative shadow-lg rounded-4 overflow-hidden h-100"
+        style="background-color: #ffffff"
+      >
+        <!-- LEFT ACCENT BAR -->
+        <div
+          style="
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 10px;
+            height: 100%;
+            background: linear-gradient(180deg, #198754, #20c997);
+          "
+        ></div>
+
+        <div class="p-4 ps-5">
+          <!-- TITLE -->
+          <div class="mb-4">
+            <span
+              class="badge rounded-pill px-4 py-2 shadow-sm"
+              style="background-color: #198754; font-size: 0.95rem"
             >
-              <i class="bi bi-telephone-fill fs-2"></i>
+              ☎ OFFICIAL CONTACT DETAILS
+            </span>
+          </div>
+
+          <!-- ADDRESS -->
+          <div class="p-3 mb-3 rounded-3 bg-light">
+            <div class="d-flex align-items-start gap-3">
+              <div class="fs-4 text-success">📍</div>
+              <div>
+                <h6 class="fw-bold mb-1">Office Address</h6>
+                <p class="mb-0 small text-muted">
+                  3rd Floor, TNSAMB Building, Guindy, Chennai
+                </p>
+              </div>
             </div>
           </div>
 
-          <h5 class="fw-bold mb-4 text-success text-center">
-            Official Contact Details
-          </h5>
+          <!-- PHONE -->
+          <div class="p-3 mb-3 rounded-3 bg-light">
+            <div class="d-flex align-items-start gap-3">
+              <div class="fs-4 text-success">☎</div>
+              <div>
+                <h6 class="fw-bold mb-1">Phone</h6>
+                <p class="mb-0 small text-muted">+91-044-22331735</p>
+              </div>
+            </div>
+          </div>
 
-         
-          <p>
-            <strong>📍 Address</strong><br />3rd Floor, TNSAMB Building, Guindy,
-            Chennai
-          </p>
-          <p><strong>☎ Phone</strong><br />+91-044-22331735</p>
-          <p><strong>✉ Email</strong><br />supporttnwesafe.org</p>
-          <p>
-            <strong>🕘 Working Hours</strong><br />Mon–Fri (10:00 AM – 5:30 PM)
-          </p>
+          <!-- EMAIL -->
+          <div class="p-3 mb-3 rounded-3 bg-light">
+            <div class="d-flex align-items-start gap-3">
+              <div class="fs-4 text-success">✉</div>
+              <div>
+                <h6 class="fw-bold mb-1">Email</h6>
+                <p class="mb-0 small text-muted">supporttnwesafe.org</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- WORKING HOURS (DAY-WISE TABLE) -->
+          <div class="p-3 rounded-3 bg-light">
+            <div class="d-flex align-items-start gap-3">
+              <div class="fs-4 text-success">🕘</div>
+              <div class="w-100">
+                <h6 class="fw-bold mb-2">Working Hours</h6>
+
+                <table
+                  class="table table-sm table-borderless mb-0 small text-muted"
+                >
+                  <tbody>
+                    <tr>
+                      <td class="fw-semibold">Monday</td>
+                      <td>9:00 AM – 4:00 PM</td>
+                    </tr>
+                    <tr>
+                      <td class="fw-semibold">Tuesday</td>
+                      <td>9:00 AM – 4:00 PM</td>
+                    </tr>
+                    <tr>
+                      <td class="fw-semibold">Wednesday</td>
+                      <td>9:00 AM – 4:00 PM</td>
+                    </tr>
+                    <tr>
+                      <td class="fw-semibold">Thursday</td>
+                      <td>9:00 AM – 4:00 PM</td>
+                    </tr>
+                    <tr>
+                      <td class="fw-semibold">Friday</td>
+                      <td>9:00 AM – 4:00 PM</td>
+                    </tr>
+                    <tr>
+                      <td class="fw-semibold text-danger">Saturday</td>
+                      <td class="text-danger">Closed</td>
+                    </tr>
+                    <tr>
+                      <td class="fw-semibold text-danger">Sunday</td>
+                      <td class="text-danger">Closed</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -55,16 +136,16 @@
               <div class="col-md-6 mb-3">
                 <label class="form-label fw-semibold">Full Name</label>
                 <input class="form-control" formControlName="name" />
-                @if (f['name'].touched && f['name'].invalid) {
-                <div class="text-danger mt-1">Name is required</div>
+                @if (f["name"].touched && f["name"].invalid) {
+                  <div class="text-danger mt-1">Name is required</div>
                 }
               </div>
 
               <div class="col-md-6 mb-3">
                 <label class="form-label fw-semibold">Email Address</label>
                 <input class="form-control" formControlName="email" />
-                @if (f['email'].touched && f['email'].invalid) {
-                <div class="text-danger mt-1">Enter a valid email</div>
+                @if (f["email"].touched && f["email"].invalid) {
+                  <div class="text-danger mt-1">Enter a valid email</div>
                 }
               </div>
             </div>
@@ -79,10 +160,10 @@
                 formControlName="mobile"
                 (input)="onMobileInput($event)"
               />
-              @if (f['mobile'].touched && f['mobile'].invalid) {
-              <div class="text-danger mt-1">
-                Please enter a valid 10-digit mobile number
-              </div>
+              @if (f["mobile"].touched && f["mobile"].invalid) {
+                <div class="text-danger mt-1">
+                  Please enter a valid 10-digit mobile number
+                </div>
               }
             </div>
 
@@ -97,8 +178,8 @@
                 <option>Grievance</option>
                 <option>Feedback</option>
               </select>
-              @if (f['queryType'].touched && f['queryType'].invalid) {
-              <div class="text-danger mt-1">Please select a query type</div>
+              @if (f["queryType"].touched && f["queryType"].invalid) {
+                <div class="text-danger mt-1">Please select a query type</div>
               }
             </div>
 
@@ -108,11 +189,11 @@
               <select class="form-select" formControlName="district">
                 <option value="" disabled>Select District</option>
                 @for (d of districts; track d) {
-                <option>{{ d }}</option>
+                  <option>{{ d }}</option>
                 }
               </select>
-              @if (f['district'].touched && f['district'].invalid) {
-              <div class="text-danger mt-1">Please select your district</div>
+              @if (f["district"].touched && f["district"].invalid) {
+                <div class="text-danger mt-1">Please select your district</div>
               }
             </div>
 
@@ -124,8 +205,8 @@
                 rows="4"
                 formControlName="message"
               ></textarea>
-              @if (f['message'].touched && f['message'].invalid) {
-              <div class="text-danger mt-1">Message is required</div>
+              @if (f["message"].touched && f["message"].invalid) {
+                <div class="text-danger mt-1">Message is required</div>
               }
             </div>
 
