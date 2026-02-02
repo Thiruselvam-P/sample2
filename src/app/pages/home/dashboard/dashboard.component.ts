@@ -33,7 +33,7 @@ export class DashboardComponent implements AfterViewInit {
 
     if (mainCarousel && bootstrap?.Carousel) {
       bootstrap.Carousel.getOrCreateInstance(mainCarousel, {
-        interval: 3000,
+        interval: 2000,
         ride: 'carousel',
         pause: false,
         wrap: true,
